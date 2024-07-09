@@ -1,0 +1,11 @@
+<form (ngSubmit)="onsubmit()" #laForm="ngForm">
+    <label for="title">Titolo</label>
+    <input type="text" name="title" id="title" placeholder="title" [(ngModel)]="BO.title" required pattern="^[a-zA-Z0-9\s]{3,20}$">
+    <label for="body">Body</label>
+    <textarea name="body" id="body" placeholder="body" row="5" [(ngModel)]="BO.body" required></textarea>
+    <button type="submit"[disabled]="!laForm.valid">Invia</button>
+</form>
+<div *ngIf="submitted">
+<p>{{BO.title}}</p>
+<p>{{BO.body}}</p>
+</div>
