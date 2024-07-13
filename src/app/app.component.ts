@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+myimage:string="/foto/logosmall.png";
   title = 'ngProvaForm';
 }
